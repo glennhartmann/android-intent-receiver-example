@@ -17,23 +17,33 @@
             </intent-filter>
             <intent-filter>
                 <!--
-                  WebAPK-like BROWSABLE intent filter for slash-statuesque-bracket.glitch.me (no DAL)
-                  https://source.chromium.org/chromium/chromium/src/+/master:chrome/android/webapk/shell_apk/AndroidManifest.xml;drc=1b7dea24e69fcbdd0743f856536100bbc75174f0
+                  https://developer.android.com/about/versions/12/web-intent-resolution -like BROWSABLE intent filter for slash-statuesque-bracket.glitch.me (no DAL)
+                  (but without android:autoVerify="true").
+                  Not scoped to a particular path within the domain.
                 -->
-                <action android:name="android.intent.action.VIEW"></action>
-                <category android:name="android.intent.category.DEFAULT"></category>
-                <category android:name="android.intent.category.BROWSABLE"></category>
-                <data android:scheme="https" android:host="slash-statuesque-bracket.glitch.me" android:pathPrefix="/pwatest/"></data>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="https" />
+
+                <!-- Include one or more domains that should be verified. -->
+                <data android:host="slash-statuesque-bracket.glitch.me" />
             </intent-filter>
             <intent-filter>
                 <!--
-                  WebAPK-like BROWSABLE intent filter for elite-small-find.glitch.me (with DAL)
-                  https://source.chromium.org/chromium/chromium/src/+/master:chrome/android/webapk/shell_apk/AndroidManifest.xml;drc=1b7dea24e69fcbdd0743f856536100bbc75174f0
+                  https://developer.android.com/about/versions/12/web-intent-resolution -like BROWSABLE intent filter for elite-small-find.glitch.me (with DAL)
+                  (but without android:autoVerify="true").
+                  Not scoped to a particular path within the domain.
                 -->
-                <action android:name="android.intent.action.VIEW"></action>
-                <category android:name="android.intent.category.DEFAULT"></category>
-                <category android:name="android.intent.category.BROWSABLE"></category>
-                <data android:scheme="https" android:host="elite-small-find.glitch.me" android:pathPrefix="/pwatest/"></data>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="https" />
+
+                <!-- Include one or more domains that should be verified. -->
+                <data android:host="elite-small-find.glitch.me" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
