@@ -35,6 +35,12 @@
                 <category android:name="android.intent.category.BROWSABLE"></category>
                 <data android:scheme="https" android:host="elite-small-find.glitch.me" android:pathPrefix="/pwatest/"></data>
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
         </activity>
     </application>
 
