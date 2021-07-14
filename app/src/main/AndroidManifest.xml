@@ -19,7 +19,6 @@
                 <!--
                   https://developer.android.com/about/versions/12/web-intent-resolution -like BROWSABLE intent filter for slash-statuesque-bracket.glitch.me (no DAL)
                   (with android:autoVerify="true").
-                  Not scoped to a particular path within the domain.
                 -->
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.BROWSABLE" />
@@ -29,12 +28,13 @@
 
                 <!-- Include one or more domains that should be verified. -->
                 <data android:host="slash-statuesque-bracket.glitch.me" />
+
+                <data android:pathPrefix="/pwatest/" />
             </intent-filter>
             <intent-filter android:autoVerify="true">
                 <!--
                   https://developer.android.com/about/versions/12/web-intent-resolution -like BROWSABLE intent filter for elite-small-find.glitch.me (with DAL)
                   (with android:autoVerify="true").
-                  Not scoped to a particular path within the domain.
                 -->
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.BROWSABLE" />
@@ -44,6 +44,8 @@
 
                 <!-- Include one or more domains that should be verified. -->
                 <data android:host="elite-small-find.glitch.me" />
+
+                <data android:pathPrefix="/pwatest/" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
