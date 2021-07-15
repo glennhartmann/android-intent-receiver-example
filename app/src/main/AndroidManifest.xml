@@ -15,7 +15,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <intent-filter>
+            <intent-filter android:autoVerify="true">
                 <!--
                   WebAPK-like BROWSABLE intent filter for slash-statuesque-bracket.glitch.me (no DAL)
                   https://source.chromium.org/chromium/chromium/src/+/master:chrome/android/webapk/shell_apk/AndroidManifest.xml;drc=1b7dea24e69fcbdd0743f856536100bbc75174f0
@@ -25,7 +25,7 @@
                 <category android:name="android.intent.category.BROWSABLE"></category>
                 <data android:scheme="https" android:host="slash-statuesque-bracket.glitch.me" android:pathPrefix="/pwatest/"></data>
             </intent-filter>
-            <intent-filter>
+            <intent-filter android:autoVerify="true">
                 <!--
                   WebAPK-like BROWSABLE intent filter for elite-small-find.glitch.me (with DAL)
                   https://source.chromium.org/chromium/chromium/src/+/master:chrome/android/webapk/shell_apk/AndroidManifest.xml;drc=1b7dea24e69fcbdd0743f856536100bbc75174f0
