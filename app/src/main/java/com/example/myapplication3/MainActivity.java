@@ -1,9 +1,15 @@
 package com.example.myapplication3;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.verify.domain.DomainVerificationManager;
 import android.content.pm.verify.domain.DomainVerificationUserState;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
@@ -19,11 +25,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Context context = this;
+
+        Button settingsButton = findViewById(R.id.button);
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Settings.ACTION_APP_OPEN_BY_DEFAULT_SETTINGS,
+                        Uri.parse("package:" + context.getPackageName()));
+                context.startActivity(intent);
+            }
+        });
+
         DomainVerificationManager manager =
-                this.getSystemService(DomainVerificationManager.class);
+                context.getSystemService(DomainVerificationManager.class);
         DomainVerificationUserState userState = null;
         try {
-            userState = manager.getDomainVerificationUserState(this.getPackageName());
+            userState = manager.getDomainVerificationUserState(context.getPackageName());
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
