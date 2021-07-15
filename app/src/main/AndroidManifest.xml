@@ -23,7 +23,7 @@
                 <action android:name="android.intent.action.VIEW"></action>
                 <category android:name="android.intent.category.DEFAULT"></category>
                 <category android:name="android.intent.category.BROWSABLE"></category>
-                <data android:scheme="https" android:host="slash-statuesque-bracket.glitch.me" android:pathPrefix="/pwatest/"></data>
+                <data android:scheme="https" android:host="slash-statuesque-bracket.glitch.me" android:pathPrefix="/pwatest2/"></data>
             </intent-filter>
             <intent-filter android:autoVerify="true">
                 <!--
@@ -33,7 +33,7 @@
                 <action android:name="android.intent.action.VIEW"></action>
                 <category android:name="android.intent.category.DEFAULT"></category>
                 <category android:name="android.intent.category.BROWSABLE"></category>
-                <data android:scheme="https" android:host="elite-small-find.glitch.me" android:pathPrefix="/pwatest/"></data>
+                <data android:scheme="https" android:host="elite-small-find.glitch.me" android:pathPrefix="/pwatest2/"></data>
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
